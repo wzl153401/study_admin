@@ -4,6 +4,7 @@ import { request } from '@umijs/max';
 
 /** 登录接口 POST /api/login/account */
 export async function login(body: API.LoginParams, options?: { [key: string]: any }) {
+  //  测试用
   return request<API.LoginResult>('/api/v1/login', {
     method: 'POST',
     data: body,
@@ -17,15 +18,6 @@ export async function info(options?: { [key: string]: any }) {
     ...(options || {}),
   });
 }
-
-
-
-
-
-
-
-
-
 
 /** 获取当前的用户 GET /api/currentUser */
 export async function currentUser(options?: { [key: string]: any }) {
@@ -44,8 +36,6 @@ export async function outLogin(options?: { [key: string]: any }) {
     ...(options || {}),
   });
 }
-
-
 
 /** 此处后端没有提供注释 GET /api/notices */
 export async function getNotices(options?: { [key: string]: any }) {
@@ -82,7 +72,7 @@ export async function updateRule(options?: { [key: string]: any }) {
     data: {
       method: 'update',
       ...(options || {}),
-    }
+    },
   });
 }
 
@@ -93,7 +83,7 @@ export async function addRule(options?: { [key: string]: any }) {
     data: {
       method: 'post',
       ...(options || {}),
-    }
+    },
   });
 }
 
@@ -104,6 +94,6 @@ export async function removeRule(options?: { [key: string]: any }) {
     data: {
       method: 'delete',
       ...(options || {}),
-    }
+    },
   });
 }
